@@ -22,10 +22,16 @@
 /* Root */
 
 body {
-  background-color: rgb(31, 41, 55);
+  background-color: white;
+  height: 10000px;
 }
 
 #logo {
   font-family: var(--font-popins);
   font-weight: 700;
+}
+
+#Text_home1 {
+  font-family: var(--font-reddit-mono);
+  font-weight: 800;
 }
