@@ -23,7 +23,7 @@
 
 body {
   background-color: white;
-  height: 10000px;
+  overflow-x: hidden;
 }
 
 #logo {

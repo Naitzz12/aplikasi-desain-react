@@ -1,16 +1,25 @@
 import Bar from "../components/bar";
+import Slider from "react-slick";
+import Image1 from "../assets/png1.png";
+import BottomL from "../components/BottomList";
 
 // Icons
 import Icon2 from "../components/icons/IconSearch";
+import Github from "../components/icons/IconGithub";
 // Icons
 
-import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/react-splide/css";
-import "@splidejs/react-splide/css/skyblue";
-import "@splidejs/react-splide/css/sea-green";
-import "@splidejs/react-splide/css/core";
+// Import css files
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Home = () => {
+  var settings = {
+    infinite: true,
+    autoplay: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
   return (
     <>
       <div className=" mt-24">
@@ -35,23 +44,141 @@ const Home = () => {
             <Icon2 />
           </p>
         </div>
-        <Splide
-          aria-label="My Favorite Images"
-          options={{
-            type: "loop",
-            width: 900,
-            autoplay: true,
-            arrows: false,
-            pagination: false,
-          }}
-        >
-          <SplideSlide>
-            <h1>Test1</h1>
-          </SplideSlide>
-          <SplideSlide>
-            <h1>Test2</h1>
-          </SplideSlide>
-        </Splide>
+        <Slider {...settings} className=" m-3">
+          <div>
+            <div className="flex gap-4 flex-col p-5 relative h-40 rounded-xl">
+              <img
+                src={Image1}
+                alt=""
+                className=" absolute left-0 right-0 top-0 bottom-0 -z-10 h-60 w-full object-cover rounded-2xl"
+              />
+              <h1 className=" top-0 font-extrabold text-4xl text-black z-10">
+                Software Enginer
+              </h1>
+              <p className=" w-60 text-xs">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Corrupti, sint!
+              </p>
+              <a
+                href=""
+                className=" absolute right-9 bottom-5 bg-black text-white rounded-full p-2"
+              >
+                <Github />
+              </a>
+            </div>
+          </div>
+          <div>
+            <div className="flex gap-4 flex-col p-5 relative h-40 rounded-xl">
+              <img
+                src={Image1}
+                alt=""
+                className=" absolute left-0 right-0 top-0 bottom-0 -z-10 h-60 w-full object-cover rounded-2xl"
+              />
+              <h1 className=" top-0 font-extrabold text-4xl text-black z-10">
+                Software Enginer
+              </h1>
+              <p className=" w-60 text-xs">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Corrupti, sint!
+              </p>
+              <a
+                href=""
+                className=" absolute right-9 bottom-5 bg-black text-white rounded-full p-2"
+              >
+                <Github />
+              </a>
+            </div>
+          </div>
+          <div>
+            <div className="flex gap-4 flex-col p-5 relative h-40 rounded-xl">
+              <img
+                src={Image1}
+                alt=""
+                className=" absolute left-0 right-0 top-0 bottom-0 -z-10 h-60 w-full object-cover rounded-2xl"
+              />
+              <h1 className=" top-0 font-extrabold text-4xl text-black z-10">
+                Software Enginer
+              </h1>
+              <p className=" w-60 text-xs">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Corrupti, sint!
+              </p>
+              <a
+                href=""
+                className=" absolute right-9 bottom-5 bg-black text-white rounded-full p-2"
+              >
+                <Github />
+              </a>
+            </div>
+          </div>
+          <div>
+            <div className="flex gap-4 flex-col p-5 relative h-40 rounded-xl">
+              <img
+                src={Image1}
+                alt=""
+                className=" absolute left-0 right-0 top-0 bottom-0 -z-10 h-60 w-full object-cover rounded-2xl"
+              />
+              <h1 className=" top-0 font-extrabold text-4xl text-black z-10">
+                Software Enginer
+              </h1>
+              <p className=" w-60 text-xs">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Corrupti, sint!
+              </p>
+              <a
+                href=""
+                className=" absolute right-9 bottom-5 bg-black text-white rounded-full p-2"
+              >
+                <Github />
+              </a>
+            </div>
+          </div>
+          <div>
+            <div className="flex gap-4 flex-col p-5 relative h-40 rounded-xl">
+              <img
+                src={Image1}
+                alt=""
+                className=" absolute left-0 right-0 top-0 bottom-0 -z-10 h-60 w-full object-cover rounded-2xl"
+              />
+              <h1 className=" top-0 font-extrabold text-4xl text-black z-10">
+                Software Enginer
+              </h1>
+              <p className=" w-60 text-xs">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Corrupti, sint!
+              </p>
+              <a
+                href=""
+                className=" absolute right-9 bottom-5 bg-black text-white rounded-full p-2"
+              >
+                <Github />
+              </a>
+            </div>
+          </div>
+          <div>
+            <div className="flex gap-4 flex-col p-5 relative h-40 rounded-xl">
+              <img
+                src={Image1}
+                alt=""
+                className=" absolute left-0 right-0 top-0 bottom-0 -z-10 h-60 w-full object-cover rounded-2xl"
+              />
+              <h1 className=" top-0 font-extrabold text-4xl text-black z-10">
+                Software Enginer
+              </h1>
+              <p className=" w-60 text-xs">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Corrupti, sint!
+              </p>
+              <a
+                href=""
+                className=" absolute right-9 bottom-5 bg-black text-white rounded-full p-2"
+              >
+                <Github />
+              </a>
+            </div>
+          </div>
+        </Slider>
+        <BottomL />
       </div>
     </>
   );
