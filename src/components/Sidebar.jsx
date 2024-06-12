@@ -1,11 +1,16 @@
 import { Link } from "react-router-dom";
+import User1 from "../assets/user1.png";
+import Bar from "./bar";
+
+// Icons
+import IconNameTag from "./icons/IconNameTag";
 
 const Sidebar = ({ isOpen, toggleButton }) => {
   return (
     <>
       <nav>
         <ul
-          className={`absolute transform left-0 transition transition-transform duration-700 top-0 w-3/5 bg-black h-screen flex justify-center items-center flex-col gap-6 z-10 ${
+          className={`absolute transform left-0 transition transition-transform duration-700 top-0 w-full bg-white h-screen flex justify-start items-start flex-col gap-6 z-10 pt-36 pl-4 ${
             isOpen ? " translate-x-0" : " -translate-x-full"
           }`}
         >
@@ -15,7 +20,7 @@ const Sidebar = ({ isOpen, toggleButton }) => {
               width="2em"
               height="2em"
               viewBox="0 0 24 24"
-              className="absolute top-0 left-0 m-2 text-cyan-500"
+              className="absolute top-0 left-0 m-4 text-cyan-500"
             >
               <path
                 fill="currentColor"
@@ -23,18 +28,30 @@ const Sidebar = ({ isOpen, toggleButton }) => {
               />
             </svg>
           </button>
+          <div className=" absolute bg-gray-800 flex justify-between items-center w-5/6 left-10 top-16 mx-3 py-6 px-3 rounded-xl">
+            <div className="flex justify-center items-center flex-row gap-4">
+              <img
+                src={User1}
+                alt=""
+                className=" w-16 absolute -left-8 border border-8 border-gray-800 rounded-full"
+              />
+              <div className=" flex justify-center items-start flex-col pl-7">
+                <div className=" flex flex-row-reverse justify-center items-center gap-1">
+                  <h2 className=" text-white">Naitzz</h2>
+                  <IconNameTag />
+                </div>
+                <p className=" text-gray-400 text-sm">ID : 0123456</p>
+              </div>
+            </div>
+            <Bar />
+          </div>
           <li>
-            <Link to={"/"} className=" text-white">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to={"/about"} className=" text-white">
+            <Link to={"/about"} className=" text-black">
               About
             </Link>
           </li>
           <li>
-            <Link to={"/contact"} className=" text-white">
+            <Link to={"/contact"} className=" text-black">
               Contact
             </Link>
           </li>

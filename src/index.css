@@ -21,9 +21,14 @@
 }
 /* Root */
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   background-color: white;
   overflow-x: hidden;
+  height: 1000px;
 }
 
 #logo {

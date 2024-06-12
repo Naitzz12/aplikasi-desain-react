@@ -1,7 +1,10 @@
+import { Link } from "react-router-dom";
 import Bar from "../components/bar";
 import Slider from "react-slick";
 import Image1 from "../assets/png1.png";
-import BottomL from "../components/BottomList";
+import ListMenu from "../components/ListMenu";
+// import Discount from "../components/DiscountList";
+import Payment from "../components/PaymentList";
 
 // Icons
 import Icon2 from "../components/icons/IconSearch";
@@ -23,30 +26,35 @@ const Home = () => {
   return (
     <>
       <div className=" mt-24">
-        <div className="flex justify-between items-center mx-5 ">
-          <div className="flex flex-col">
-            <h1 className=" text-3xl text-cyan-500" id="Text_home1">
-              Hi Naitzz!
-            </h1>
-            <p className=" text-xs text-black" id="Text_home2">
-              Welcome To The Dash
+        <div className="relative mx-3 flex justify-between items-center flex-col gap-4 pb-10 bg-blue-900 p-4 border rounded-2xl">
+          <div className="flex justify-between items-center w-full">
+            <div className="flex flex-col">
+              <h1 className=" text-3xl text-cyan-500" id="Text_home1">
+                Hi Naitzz!
+              </h1>
+              <p className=" text-xs text-white" id="Text_home2">
+                Welcome To The Dash
+              </p>
+            </div>
+            <Bar />
+          </div>
+          <hr className=" h-1 w-full bg-white rounded-full" />
+          <div className="absolute mx-2 w-11/12 top-24">
+            <input
+              type="search"
+              placeholder="Search Something.."
+              className="w-full p-2 py-3 pl-11 rounded-full my-3 outline-none bg-gray-200 -z-10 text-xs shadow-xl"
+            />
+            <p className="absolute top-4 left-2">
+              <Icon2 />
             </p>
           </div>
-          <Bar />
         </div>
-        <div className="relative mx-2">
-          <input
-            type="search"
-            placeholder="Search Something.."
-            className="w-full p-2 pl-11 rounded-full my-3 outline-none bg-gray-200 -z-10"
-          />
-          <p className="absolute top-4 left-2">
-            <Icon2 />
-          </p>
-        </div>
-        <Slider {...settings} className=" m-3">
+
+        <ListMenu />
+        <Slider {...settings} className=" m-3 rounded-xl mt-8">
           <div>
-            <div className="flex gap-4 flex-col p-5 relative h-40 rounded-xl">
+            <div className="flex gap-4 flex-col p-5 relative h-40">
               <img
                 src={Image1}
                 alt=""
@@ -59,12 +67,12 @@ const Home = () => {
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Corrupti, sint!
               </p>
-              <a
-                href=""
+              <Link
+                to={"https://github.com/"}
                 className=" absolute right-9 bottom-5 bg-black text-white rounded-full p-2"
               >
                 <Github />
-              </a>
+              </Link>
             </div>
           </div>
           <div>
@@ -81,12 +89,12 @@ const Home = () => {
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Corrupti, sint!
               </p>
-              <a
-                href=""
+              <Link
+                to={"https://github.com/"}
                 className=" absolute right-9 bottom-5 bg-black text-white rounded-full p-2"
               >
                 <Github />
-              </a>
+              </Link>
             </div>
           </div>
           <div>
@@ -103,12 +111,12 @@ const Home = () => {
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Corrupti, sint!
               </p>
-              <a
-                href=""
+              <Link
+                to={"https://github.com/"}
                 className=" absolute right-9 bottom-5 bg-black text-white rounded-full p-2"
               >
                 <Github />
-              </a>
+              </Link>
             </div>
           </div>
           <div>
@@ -125,12 +133,12 @@ const Home = () => {
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Corrupti, sint!
               </p>
-              <a
-                href=""
+              <Link
+                to={"https://github.com/"}
                 className=" absolute right-9 bottom-5 bg-black text-white rounded-full p-2"
               >
                 <Github />
-              </a>
+              </Link>
             </div>
           </div>
           <div>
@@ -147,12 +155,12 @@ const Home = () => {
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Corrupti, sint!
               </p>
-              <a
-                href=""
+              <Link
+                to={"https://github.com/"}
                 className=" absolute right-9 bottom-5 bg-black text-white rounded-full p-2"
               >
                 <Github />
-              </a>
+              </Link>
             </div>
           </div>
           <div>
@@ -169,16 +177,17 @@ const Home = () => {
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Corrupti, sint!
               </p>
-              <a
-                href=""
+              <Link
+                to={"https://github.com/"}
                 className=" absolute right-9 bottom-5 bg-black text-white rounded-full p-2"
               >
                 <Github />
-              </a>
+              </Link>
             </div>
           </div>
         </Slider>
-        <BottomL />
+        <Payment />
+        {/* <Discount /> */}
       </div>
     </>
   );

@@ -3,8 +3,11 @@ import { Link } from "react-router-dom";
 const BottomL = () => {
   return (
     <>
-      <nav className="flex justify-center items-center fixed bottom-0 left-0 right-0 py-7 gap-10 bg-gray-300 w-full">
-        <Link to={"/"}>
+      <nav className="flex justify-center items-center fixed bottom-0 left-1 right-0 py-3 gap-10 bg-gray-300 w-11/12 m-3 rounded-2xl shadow-lg">
+        <Link
+          to={"/"}
+          className=" hover:p-3 hover:bg-gray-400 transition transition-all rounded-full hover:-top-9 hover:left-7 hover:border hover:border-4 hover:border-white"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="2em"
@@ -17,7 +20,7 @@ const BottomL = () => {
             />
           </svg>
         </Link>
-        <Link>
+        <Link className=" hover:p-3 hover:bg-gray-400 transition transition-all rounded-full hover:-top-9 hover:left-20 hover:border hover:border-4 hover:border-white">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="2em"
@@ -30,7 +33,7 @@ const BottomL = () => {
             />
           </svg>
         </Link>
-        <Link>
+        <Link className="">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="2em"
@@ -43,7 +46,7 @@ const BottomL = () => {
             />
           </svg>
         </Link>
-        <Link>
+        <Link className="">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="2em"
@@ -56,6 +59,7 @@ const BottomL = () => {
             />
           </svg>
         </Link>
+        {/* <hr className=" absolute bottom-4 h-1 w-4/5 bg-black rounded-full" /> */}
       </nav>
     </>
   );
